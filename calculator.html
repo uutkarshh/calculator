@@ -1,0 +1,41 @@
+<html><head><title>calculater</title></head>
+<body><div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+  <div style="height: 200px; width: 500; 
+  margin-top: 50px;margin-left: 50px;
+   background-color: rgb(220, 186, 252); 
+   border-radius: 45ic; border: 2px solid black; align-items: center; " >
+  <input type="text" id="cal-1" style="margin-top: 35px; margin-left: 60px; height: 50px;border-radius: 45ic;">
+<select name="" id="cal" style="width: 50px; height: 50px; border-radius: 45ic;
+ font-size: 1.5rem; background-color: rgb(177, 177, 214);">
+  <option value="+">+</option>
+  <option value="-">-</option>
+  <option value="*">*</option>
+  <option value="/">/</option>
+</select>
+  <input type="text" id="cal-2" style="margin-top: 35px; height: 50px;border-radius: 40ic;">
+  <button onclick="col()" style="display: flex; margin-top: 15px; margin-left: 210px; border-radius: 40ic; height: 30px; align-items: center;">calculate</button>
+  <input type="text" id="total" style="display: flex; margin-left: 165px; border-radius: 40px; margin-top: 15px; height: 40px;">
+</div>  </div>
+</body>
+
+<script>
+ function col(){
+    x=document.getElementById("cal-1").value;
+  y=document.getElementById("cal-2").value;
+  z=document.getElementById("cal").value;
+  if(z=="+"){
+    res=parseInt(x) + parseInt(y);
+  }
+  if(z=="/"){
+    res=parseInt(x) / parseInt(y);
+  }
+  if(z=="-"){
+    res=parseInt(x)-parseInt(y);
+  }
+  if(z=="*"){
+    res=parseInt(x)*parseInt(y);
+  }
+document.getElementById("total").value=res;
+  }
+</script>
+</html>
